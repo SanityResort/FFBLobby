@@ -28,35 +28,33 @@ class PublicControllerTest {
     private JnlpService jnlpService;
 
     @Test
-    void getJnlp_noAuth_returns200() throws Exception {
+    void getJnlp_noAuth_redirects() throws Exception {
         when(jnlpService.resolveJnlp("TEST", null, null))
                 .thenReturn(new JnlpResponse("https://jnlp.example.com", "primary", "TEST"));
 
         mockMvc.perform(get("/api/public/jnlp?environment=TEST"))
-                .andExpect(status().isOk())
-                .andExpect(jsonPath("$.jnlpUrl").value("https://jnlp.example.com"))
-                .andExpect(jsonPath("$.backendName").value("primary"))
-                .andExpect(jsonPath("$.environment").value("TEST"));
+                .andExpect(status().isFound())
+                .andExpect(header().string("Location", "https://jnlp.example.com"));
     }
 
     @Test
-    void getJnlp_withGameName_returns200() throws Exception {
+    void getJnlp_withGameName_redirects() throws Exception {
         when(jnlpService.resolveJnlp("TEST", "myGame", null))
                 .thenReturn(new JnlpResponse("https://jnlp.example.com", "primary", "TEST"));
 
         mockMvc.perform(get("/api/public/jnlp?environment=TEST&gameName=myGame"))
-                .andExpect(status().isOk())
-                .andExpect(jsonPath("$.backendName").value("primary"));
+                .andExpect(status().isFound())
+                .andExpect(header().string("Location", "https://jnlp.example.com"));
     }
 
     @Test
-    void getJnlp_withGameId_returns200() throws Exception {
+    void getJnlp_withGameId_redirects() throws Exception {
         when(jnlpService.resolveJnlp("TEST", null, 42L))
                 .thenReturn(new JnlpResponse("https://jnlp.backend2.com", "backend2", "TEST"));
 
         mockMvc.perform(get("/api/public/jnlp?environment=TEST&gameId=42"))
-                .andExpect(status().isOk())
-                .andExpect(jsonPath("$.backendName").value("backend2"));
+                .andExpect(status().isFound())
+                .andExpect(header().string("Location", "https://jnlp.backend2.com"));
     }
 
     @Test
