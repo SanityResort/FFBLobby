@@ -1,0 +1,15 @@
+/home/runner/work/FFBLobby/FFBLobby/src/main/java/com/ffblobby/controller/PublicController.java
+/home/runner/work/FFBLobby/FFBLobby/src/main/java/com/ffblobby/service/BackendServerService.java
+/home/runner/work/FFBLobby/FFBLobby/src/main/java/com/ffblobby/repository/BackendServerRepository.java
+/home/runner/work/FFBLobby/FFBLobby/src/main/java/com/ffblobby/entity/BackendServer.java
+/home/runner/work/FFBLobby/FFBLobby/src/main/java/com/ffblobby/entity/GameAssociation.java
+/home/runner/work/FFBLobby/FFBLobby/src/main/java/com/ffblobby/dto/JnlpResponse.java
+/home/runner/work/FFBLobby/FFBLobby/src/main/java/com/ffblobby/service/JnlpService.java
+/home/runner/work/FFBLobby/FFBLobby/src/main/java/com/ffblobby/FFBLobbyApplication.java
+/home/runner/work/FFBLobby/FFBLobby/src/main/java/com/ffblobby/repository/GameAssociationRepository.java
+/home/runner/work/FFBLobby/FFBLobby/src/main/java/com/ffblobby/controller/AdminApiController.java
+/home/runner/work/FFBLobby/FFBLobby/src/main/java/com/ffblobby/dto/BackendServerRequest.java
+/home/runner/work/FFBLobby/FFBLobby/src/main/java/com/ffblobby/config/SecurityConfig.java
+/home/runner/work/FFBLobby/FFBLobby/src/main/java/com/ffblobby/controller/AdminWebController.java
+/home/runner/work/FFBLobby/FFBLobby/src/main/java/com/ffblobby/entity/Environment.java
+/home/runner/work/FFBLobby/FFBLobby/src/main/java/com/ffblobby/dto/BackendServerResponse.java
