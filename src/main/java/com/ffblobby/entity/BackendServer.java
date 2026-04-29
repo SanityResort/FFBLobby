@@ -23,7 +23,7 @@ public class BackendServer {
 
     private String checkUrl;
 
-    @Column(nullable = false)
+    @Column(name = "is_primary", nullable = false)
     private boolean primary = false;
 
     public BackendServer() {}
